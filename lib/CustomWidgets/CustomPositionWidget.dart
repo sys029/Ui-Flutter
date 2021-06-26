@@ -17,9 +17,9 @@ class CustomPositionText extends StatelessWidget {
         textAlign: TextAlign.left,
         style: TextStyle(
             color: Color.fromRGBO(255, 255, 255, 1),
-            fontFamily: 'Sofia Pro',
+            fontFamily: "Montserrat",
             fontSize: 16,
-            fontWeight: FontWeight.w400,
+            fontWeight: FontWeight.bold,
             height: 1),
       ),
     );

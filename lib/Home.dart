@@ -78,57 +78,58 @@ class Mytaskdesign extends StatelessWidget {
                 width: 1125,
                 height: 7,
               ),
-              CustomImageCollectionContainer(),
+              CustomImageCollectionContainer()
             ],
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Image(
-          image: AssetImage('assets/images/floatingIcon.png'),
-          height: 20,
-          width: 20,
+      floatingActionButton: Transform.translate(
+        offset: Offset(20, 0),
+        child: FloatingActionButton(
+          onPressed: () {},
+          child: Image(
+            image: AssetImage('assets/images/floatingIcon.png'),
+            height: 20,
+            width: 20,
+          ),
+          backgroundColor: Colors.red[600],
+          elevation: 2.0,
         ),
-        backgroundColor: Colors.red[600],
-        elevation: 2.0,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(bottom: 20),
-        child: Container(
-          child: ClipRRect(
-            borderRadius: BorderRadius.all(Radius.circular(50)),
-            child: BottomAppBar(
-              shape: CircularNotchedRectangle(),
-              child: Container(
-                height: 70,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: <Widget>[
-                    Image(
-                      image: AssetImage('assets/images/dropup.png'),
-                      height: 25,
-                      width: 25,
-                    ),
-                    Image(
-                      image: AssetImage('assets/images/appbarlike.png'),
-                      height: 25,
-                      width: 25,
-                    ),
-                    SizedBox.shrink(),
-                    Image(
-                      image: AssetImage('assets/images/event.png'),
-                      height: 25,
-                      width: 25,
-                    ),
-                    Image(
-                      image: AssetImage('assets/images/person.png'),
-                      height: 25,
-                      width: 25,
-                    ),
-                  ],
-                ),
+        padding: const EdgeInsets.only(bottom: 20, right: 20, left: 20),
+        child: ClipRRect(
+          borderRadius: BorderRadius.all(Radius.circular(50)),
+          child: BottomAppBar(
+            shape: CircularNotchedRectangle(),
+            child: Container(
+              height: 70,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Image(
+                    image: AssetImage('assets/images/dropup.png'),
+                    height: 25,
+                    width: 25,
+                  ),
+                  Image(
+                    image: AssetImage('assets/images/appbarlike.png'),
+                    height: 25,
+                    width: 25,
+                  ),
+                  SizedBox.shrink(),
+                  Image(
+                    image: AssetImage('assets/images/event.png'),
+                    height: 25,
+                    width: 25,
+                  ),
+                  Image(
+                    image: AssetImage('assets/images/person.png'),
+                    height: 25,
+                    width: 25,
+                  ),
+                ],
               ),
             ),
           ),

@@ -26,7 +26,7 @@ class CustomContainerPost extends StatelessWidget {
                 style: TextStyle(
                   color: Color.fromRGBO(14, 24, 35, 1),
                   fontFamily: "Montserrat",
-                  fontSize: 16,
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                   height: 1,
                 ),
@@ -63,7 +63,7 @@ class CustomContainerPost extends StatelessWidget {
                 style: TextStyle(
                   color: Color.fromRGBO(14, 24, 35, 1),
                   fontFamily: "Montserrat",
-                  fontSize: 18,
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                   height: 1,
                 ),
@@ -78,6 +78,7 @@ class CustomContainerPost extends StatelessWidget {
                       "Lorem ipsum doer Lorem ipsum doer.Lorem ipsum doer Lorem ipsum ",
                   style: TextStyle(
                       color: Colors.black,
+                      fontSize: 12,
                       fontFamily: "Montserrat",
                       fontWeight: FontWeight.normal),
                   children: <TextSpan>[
@@ -86,7 +87,7 @@ class CustomContainerPost extends StatelessWidget {
                       style: TextStyle(
                         color: Colors.black,
                         fontFamily: "Montserrat",
-                        fontSize: 14,
+                        fontSize: 12,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -94,11 +95,11 @@ class CustomContainerPost extends StatelessWidget {
                 ),
               )),
           Positioned(
-              top: 25,
+              top: 20,
               child: Row(
                 children: [
                   Container(
-                    width: 400,
+                    width: MediaQuery.of(context).size.width,
                     height: 500,
                     decoration: BoxDecoration(
                         image: DecorationImage(
@@ -219,8 +220,8 @@ class CustomImageCollectionContainer extends StatelessWidget {
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   color: Color.fromRGBO(14, 24, 35, 1),
-                  fontFamily: 'Sofia Pro',
-                  fontSize: 16,
+                  fontFamily: "Montserrat",
+                  fontSize: 15,
                   fontWeight: FontWeight.w800,
                   height: 1,
                 ),
@@ -230,7 +231,7 @@ class CustomImageCollectionContainer extends StatelessWidget {
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   color: Color.fromRGBO(128, 132, 144, 1),
-                  fontFamily: 'Sofia Pro',
+                  fontFamily: "Montserrat",
                   fontSize: 12,
                   fontWeight: FontWeight.normal,
                   height: 1,
@@ -256,43 +257,70 @@ class CustomImageCollectionContainer extends StatelessWidget {
                 textAlign: TextAlign.left,
                 style: TextStyle(
                   color: Color.fromRGBO(14, 24, 35, 1),
-                  fontFamily: 'Sofia Pro',
-                  fontSize: 18,
+                  fontFamily: "Montserrat",
+                  fontSize: 15,
                   fontWeight: FontWeight.bold,
                   height: 1,
                 ),
               )),
           Positioned(
-            top: 110,
-            left: 20,
-            right: 20,
-            child: Text(
-                'Lorem ipsum doer Lorem ipsum doer.Lorem ipsum doer Lorem ipsum doer Lorem ipsum doer ...More',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  color: Color.fromRGBO(148, 148, 151, 1.0),
-                  fontSize: 12,
-                  fontWeight: FontWeight.normal,
-                  height: 1,
-                )),
-          ),
+              top: 105,
+              left: 20,
+              child: Row(
+                children: [
+                  Image.asset(
+                    'assets/images/calender.png',
+                    height: 15,
+                    width: 15,
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    'July 01, 2020 - August 31, 2020',
+                    textAlign: TextAlign.left,
+                    style: TextStyle(
+                      color: Colors.blue[800],
+                      fontFamily: "Montserrat",
+                      fontSize: 12,
+                      fontWeight: FontWeight.bold,
+                      height: 1,
+                    ),
+                  ),
+                ],
+              )),
           Positioned(
-              top: 150,
+              top: 125,
+              left: 20,
+              right: 20,
+              child: RichText(
+                text: const TextSpan(
+                  text:
+                      "Lorem ipsum doer Lorem ipsum doer.Lorem ipsum doer Lorem ipsum ",
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 12,
+                      fontFamily: "Montserrat",
+                      fontWeight: FontWeight.normal),
+                ),
+              )),
+          Positioned(
+              top: 160,
               child: Row(
                 children: [
                   Container(
-                    width: 370,
+                    width: MediaQuery.of(context).size.width,
                     height: 250,
                     decoration: BoxDecoration(
                         image: DecorationImage(
                       image: AssetImage('assets/images/imgcollectn.png'),
-                      fit: BoxFit.fill,
+                      fit: BoxFit.fitWidth,
                     )),
                   )
                 ],
               )),
           Positioned(
-              top: 410,
+              top: 415,
               left: 20,
               child: Image(
                 image: AssetImage('assets/images/likeBlue.png'),
@@ -300,7 +328,7 @@ class CustomImageCollectionContainer extends StatelessWidget {
                 height: 12,
               )),
           Positioned(
-            top: 411,
+            top: 416,
             left: 38,
             child: Text('15k Likes',
                 style: TextStyle(
